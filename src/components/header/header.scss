@@ -1,0 +1,127 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/breakpoints' as *;
+
+.header {
+  width: 100%;
+  background-color: $color-bg;
+  border-bottom: 1px solid $color-outline;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1920px;
+    height: 85px;
+    margin: 0 auto;
+    padding: 0 $size-10;
+
+    @include tablet {
+      padding: 0 $size-4;
+    }
+
+    @include mobile {
+      height: 64px;
+      padding: 0 $size-2;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    img {
+      height: 35px;
+      width: auto;
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: inline-flex;
+    gap: 32px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__auth {
+    display: flex;
+    align-items: center;
+    gap: $size-2;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: $size-4;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    font-family: $font-family-base;
+    font-size: $font-size-body-medium;
+    font-weight: $font-weight-regular;
+    color: $color-on-bg-low; // #737380[cite: 3]
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-on-primary; // #242145[cite: 3]
+    }
+
+    &--active {
+      color: $color-on-primary; // #242145[cite: 3]
+      font-weight: $font-weight-bold; // 700[cite: 4]
+    }
+  }
+}
+
+// ==========================================
+// Button Styles
+// ==========================================
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $btn-padding-medium; // 10px 20px[cite: 5]
+  font-family: $font-family-base;
+  font-size: $font-size-label-large; // 14px[cite: 4]
+  font-weight: $font-weight-bold; // 700[cite: 4]
+  border-radius: $corner-small; // 8px[cite: 5]
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+
+  // Кнопка Log In (Outline)
+  &--outline {
+    background-color: transparent;
+    color: $color-on-primary; // #242145[cite: 3]
+    border: 1.5px solid $color-on-primary; // #242145[cite: 3]
+
+    &:hover {
+      background-color: rgba($color-on-primary, 0.05);
+    }
+  }
+
+  // Кнопка Sign Up (Primary Yellow)
+  &--primary {
+    background-color: $color-primary; // #FFD02B[cite: 3]
+    color: $color-on-primary; // #242145[cite: 3]
+    border: 1.5px solid $color-on-primary; // #242145[cite: 3]
+
+    &:hover {
+      background-color: $color-primary-high; // #E5BBO0[cite: 3]
+    }
+  }
+}
