@@ -53,7 +53,7 @@
   &__nav {
     display: inline-flex;
     align-items: center;
-    gap: 32px;
+    gap: $size-4;
     width: 100%;
     justify-content: end;
   }
@@ -221,7 +221,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 48px;
+    margin-bottom: $size-6;
   }
 
   &__logo {
@@ -229,7 +229,7 @@
     align-items: center;
     gap: $size-2;
     text-decoration: none;
-    color: #fff;
+    color: $color-white;
     font-family: $font-family-base;
     font-weight: $font-weight-bold;
     font-size: $font-size-body-medium;
@@ -244,12 +244,12 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: $size-5;
+    height: $size-5;
     border: none;
     border-radius: $corner-small;
-    background-color: rgba(255, 255, 255, 0.08);
-    color: #fff;
+    background-color: rgba($color-white, 0.08);
+    color: $color-white;
     cursor: pointer;
   }
 
@@ -259,7 +259,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: $size-4;
   }
 
   &__link {
@@ -267,7 +267,7 @@
     font-family: $font-family-base;
     font-size: 28px;
     font-weight: $font-weight-regular;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba($color-white, 0.6);
     text-decoration: none;
 
     &--active {
@@ -280,18 +280,18 @@
     display: flex;
     flex-direction: column;
     gap: $size-2;
-    margin-top: 32px;
+    margin-top: $size-4;
 
     .btn {
       width: 100%;
     }
 
     .btn--outline {
-      color: #fff;
-      border-color: #fff;
+      color: $color-white;
+      border-color: $color-white;
 
       &:hover {
-        background-color: rgba(255, 255, 255, 0.08);
+        background-color: rgba($color-white, 0.08);
       }
     }
   }
