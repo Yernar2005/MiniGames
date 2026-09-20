@@ -23,14 +23,18 @@
       </nav>
 
       <div class="header__auth auth">
-        <a href="/login" class="btn btn--outline">Log In</a>
-        <a href="/signup" class="btn btn--primary">Sign Up</a>
+        <button type="button" class="btn btn--outline" data-auth-trigger="login">Log In</button>
+        <button type="button" class="btn btn--primary header__signup" data-auth-trigger="register">
+          Sign Up
+        </button>
       </div>
     </div>
 
     <div class="header__tablet">
       <div class="header__actions">
-        <a href="/signup" class="btn btn--primary header__signup">Sign Up</a>
+        <button type="button" class="btn btn--primary header__signup" data-auth-trigger="register">
+          Sign Up
+        </button>
 
         <button
           class="header__burger"
@@ -133,8 +137,10 @@
     </nav>
 
     <div class="mobile-nav__auth">
-      <a href="/login" class="btn btn--outline">Log In</a>
-      <a href="/signup" class="btn btn--primary">Sign Up</a>
+      <button type="button" class="btn btn--outline" data-auth-trigger="login">Log In</button>
+      <button type="button" class="btn btn--primary header__signup" data-auth-trigger="register">
+        Sign Up
+      </button>
     </div>
   </div>
 </header>
