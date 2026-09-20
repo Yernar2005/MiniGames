@@ -14,7 +14,16 @@ export class Header extends Component {
 
   private renderContent(): void {
     this.element.innerHTML = headerTemplate;
+    this.setLogoSrc();
     this.bindEvents();
+  }
+
+  private setLogoSrc(): void {
+    const base = import.meta.env.BASE_URL ?? '/';
+    const logoPath = `${base}Brand_Logo.svg`;
+    this.element.querySelectorAll<HTMLImageElement>('[data-logo]').forEach((img) => {
+      img.src = logoPath;
+    });
   }
 
   private bindEvents(): void {
