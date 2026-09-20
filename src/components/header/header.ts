@@ -1,5 +1,6 @@
 import { Component } from '../base-component';
 import headerTemplate from './header.html?raw';
+import { openAuthDialog, type AuthDialogTab } from '../auth-dialog/auth-dialog-events';
 
 export class Header extends Component {
   private mobileNav: HTMLElement | null = null;
@@ -17,9 +18,6 @@ export class Header extends Component {
   }
 
   private bindEvents(): void {
-    const loginBtn = this.element.querySelector('#auth-trigger-btn');
-    loginBtn?.addEventListener('click', () => {});
-
     this.mobileNav = this.element.querySelector('[data-mobile-nav]');
     this.burgers = this.element.querySelectorAll('[data-burger]');
     this.closeBtn = this.element.querySelector('[data-mobile-nav-close]');
@@ -30,13 +28,28 @@ export class Header extends Component {
 
     this.closeBtn?.addEventListener('click', () => this.closeMenu());
 
+
     this.mobileNav?.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => this.closeMenu());
+    });
+
+    this.element.querySelectorAll<HTMLButtonElement>('[data-auth-trigger]').forEach((trigger) => {
+      trigger.addEventListener('click', () => this.handleAuthTrigger(trigger));
     });
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') this.closeMenu();
     });
+  }
+
+  private handleAuthTrigger(trigger: HTMLButtonElement): void {
+    const tab = (trigger.dataset.authTrigger as AuthDialogTab) ?? 'login';
+
+    if (this.mobileNav?.contains(trigger)) {
+      this.closeMenu();
+    }
+
+    openAuthDialog(tab);
   }
 
   private toggleMenu(): void {
