@@ -7,7 +7,6 @@ export class Hero extends Component{
         this.renderContent()
     }
 
-
     private renderContent(): void{
         this.element.innerHTML = heroTemplate
 
