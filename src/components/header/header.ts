@@ -28,7 +28,6 @@ export class Header extends Component {
 
     this.closeBtn?.addEventListener('click', () => this.closeMenu());
 
-
     this.mobileNav?.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => this.closeMenu());
     });

@@ -18,7 +18,7 @@
       padding: 0 $size-4;
       flex-direction: column;
       align-items: stretch;
-      gap:$size-3
+      gap: $size-3;
     }
 
     @include mobile {
@@ -39,10 +39,10 @@
     width: 100%;
     height: auto;
     border-radius: $corner-large;
-    
-    @include tablet{
-        height: 260px;
-        object-fit: cover;
+
+    @include tablet {
+      height: 260px;
+      object-fit: cover;
     }
   }
 

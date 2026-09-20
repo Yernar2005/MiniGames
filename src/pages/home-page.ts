@@ -11,7 +11,7 @@ export class HomePage extends Component {
   private developerCta: DeveloperCta;
 
   constructor() {
-    super('main', 'home-page');
+    super('div', 'home-page');
     this.hero = new Hero();
     this.carrusel = new Carrusel();
     this.topPlayer = new TopPlayers();

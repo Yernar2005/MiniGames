@@ -36,8 +36,7 @@ class App {
   private setupRoutes(): void {
     this.router.addRoute('/', () => new HomePage().render());
 
-
-    this.router.start(); 
+    this.router.start();
   }
 }
 

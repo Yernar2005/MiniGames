@@ -71,8 +71,6 @@
     margin: 0;
   }
 
-
-
   &__columns {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -92,7 +90,7 @@
   &__column {
     &--community {
       @include mobile {
-        grid-column: 1 / -1; 
+        grid-column: 1 / -1;
       }
     }
   }
@@ -142,14 +140,15 @@
     border-radius: $corner-full;
     background-color: $color-bg-footer-low;
     color: $color-on-bg-footer;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
 
     &:hover {
       background-color: $color-bg-footer-lowest;
       color: $color-white;
     }
   }
-
 
   &__bottom {
     display: flex;

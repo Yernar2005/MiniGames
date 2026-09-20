@@ -10,7 +10,9 @@
   justify-content: center;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
 
   &--open {
     visibility: visible;
@@ -28,6 +30,7 @@
     z-index: 1;
     width: 100%;
     max-width: 420px;
+    min-height: 320px;
     max-height: calc(100vh - #{$size-6});
     overflow-y: auto;
     margin: $size-3;
@@ -46,6 +49,15 @@
     @include mobile {
       padding: $size-4;
     }
+  }
+
+  &__content {
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   &__close {
@@ -88,7 +100,9 @@
     font-weight: $font-weight-bold;
     color: $color-on-primary;
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
 
     &--active {
       background-color: $color-on-primary;
@@ -97,7 +111,10 @@
   }
 
   &__content--hidden {
-    display: none;
+    opacity: 0;
+    transform: translateY(6px);
+    pointer-events: none;
+    visibility: hidden;
   }
 
   &__title {

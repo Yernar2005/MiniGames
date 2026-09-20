@@ -17,7 +17,6 @@ interface SocialLink {
   icon: string;
 }
 
-
 const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: 'Explore',
