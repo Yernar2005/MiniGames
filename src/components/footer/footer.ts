@@ -56,8 +56,17 @@ export class Footer extends Component {
 
   private renderContent(): void {
     this.element.innerHTML = footerTemplate;
+    this.setLogoSrc();
     this.renderColumns();
     this.renderCopyright();
+  }
+
+  private setLogoSrc(): void {
+    const base = import.meta.env.BASE_URL ?? '/';
+    const logoPath = `${base}Frame.svg`;
+    this.element.querySelectorAll<HTMLImageElement>('[data-logo]').forEach((img) => {
+      img.src = logoPath;
+    });
   }
 
   private renderColumns(): void {
