@@ -1,14 +1,13 @@
-import { Component } from "../base-component";
-import devCtaTemplate from "./dev.html?raw"
+import { Component } from '../base-component';
+import devCtaTemplate from './dev.html?raw';
 
-export class DeveloperCta extends Component{
-    constructor(){
-        super('section', 'dev-cta')
-        this.renderContent();
-    }
+export class DeveloperCta extends Component {
+  constructor() {
+    super('section', 'dev-cta');
+    this.renderContent();
+  }
 
-
-    private renderContent(): void {
-        this.element.innerHTML = devCtaTemplate;
-    }
+  private renderContent(): void {
+    this.element.innerHTML = devCtaTemplate;
+  }
 }

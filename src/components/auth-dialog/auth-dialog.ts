@@ -27,7 +27,6 @@ export class AuthDialog extends Component {
   }
 
   private bindEvents(): void {
-
     document.addEventListener(AUTH_DIALOG_OPEN_EVENT, this.handleOpenEvent as EventListener);
     document.addEventListener('keydown', this.handleKeydown);
 
@@ -37,8 +36,6 @@ export class AuthDialog extends Component {
     this.tabs.forEach((tab) => {
       tab.addEventListener('click', () => this.switchTab(tab.dataset.authTab as AuthDialogTab));
     });
-
-
 
     this.element.querySelectorAll('form').forEach((form) => {
       form.addEventListener('submit', (e) => e.preventDefault());
@@ -82,9 +79,13 @@ export class AuthDialog extends Component {
 
   public close(): void {
     this.element.classList.remove('auth-dialog--open');
-    this.element.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('no-scroll');
-    this.lastFocusedElement?.focus();
+
+    const TRANSITION_MS = 220;
+    window.setTimeout(() => {
+      this.element.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+      this.lastFocusedElement?.focus();
+    }, TRANSITION_MS);
   }
 
   private switchTab(tab: AuthDialogTab): void {
@@ -97,6 +98,13 @@ export class AuthDialog extends Component {
     this.contents.forEach((content) => {
       const isActive = content.dataset.authContent === tab;
       content.classList.toggle('auth-dialog__content--hidden', !isActive);
+    });
+
+    requestAnimationFrame(() => {
+      const activeContent = this.contents.find(
+        (c) => !c.classList.contains('auth-dialog__content--hidden')
+      );
+      activeContent?.querySelector<HTMLElement>('input')?.focus();
     });
   }
 

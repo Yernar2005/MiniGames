@@ -22,7 +22,6 @@ export class Router {
     this.handleRoute();
   }
 
-
   public start(): void {
     this.handleRoute();
   }
@@ -35,11 +34,8 @@ export class Router {
     this.rootElement.appendChild(component());
     window.scrollTo(0, 0);
 
-
-
     document.dispatchEvent(new CustomEvent(ROUTE_CHANGE_EVENT, { detail: path }));
   }
-
 
   private initLinkInterceptor(): void {
     document.addEventListener('click', (e: MouseEvent) => {
