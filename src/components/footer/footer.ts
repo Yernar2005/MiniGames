@@ -23,18 +23,18 @@ const FOOTER_COLUMNS: FooterColumn[] = [
     title: 'Explore',
     links: [
       { label: 'Home', href: '/' },
-      { label: 'Library', href: '/library' },
-      { label: 'Categories', href: '/categories' },
-      { label: 'Tournaments', href: '/tournaments' },
+      { label: 'Library', href: '/' },
+      { label: 'Categories', href: '/' },
+      { label: 'Tournaments', href: '/' },
     ],
   },
   {
     title: 'Company',
     links: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Contact', href: '/contact' },
-      { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Terms of Service', href: '/terms' },
+      { label: 'About Us', href: '/' },
+      { label: 'Contact', href: '/' },
+      { label: 'Privacy Policy', href: '/' },
+      { label: 'Terms of Service', href: '/' },
     ],
   },
 ];
