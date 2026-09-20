@@ -1,0 +1,11 @@
+@use 'tokens' as *;
+@use 'breakpoints' as *;
+@use 'base' as *;
+
+@use '../components/header/header';
+@use '../components/hero/hero';
+@use '../components/carrusel/carrusel';
+@use '../components/table/table';
+@use '../components/dev/dev';
+@use '../components/footer/footer';
+@use '../components/auth-dialog/auth-dialog';

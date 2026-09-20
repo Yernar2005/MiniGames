@@ -1,0 +1,254 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/breakpoints' as *;
+
+.top-players {
+  width: 100%;
+  background-color: $color-bg;
+  padding: $size-1 $size-3;
+
+  @include mobile {
+    padding: 0 $size-1;
+  }
+
+  &__container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 $size-10;
+
+    @include tablet {
+      padding: 0 $size-4;
+    }
+
+    @include mobile {
+      padding: 0 $size-2;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: $size-2;
+    font-family: $font-family-base;
+    font-size: $font-size-headline-medium;
+    font-weight: $font-weight-extra-bold;
+    color: $color-on-primary;
+    margin: 0 0 $size-4;
+  }
+
+  &__accent {
+    display: inline-block;
+    width: 4px;
+    height: $size-3;
+    border-radius: $corner-full;
+    background-color: $color-primary;
+  }
+
+  &__title-suffix {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__table-wrapper {
+    overflow: auto;
+    border-radius: $corner-extra-large;
+    border: 2px solid $color-on-primary;
+    box-shadow: $shadow-level-3;
+    background-color: $color-surface-low;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    @include mobile {
+      min-width: 0;
+    }
+  }
+
+  &__th {
+    padding: $size-2 $size-3;
+    background-color: $color-tertiary;
+    color: $color-white;
+    font-family: $font-family-base;
+    font-size: $font-size-body-medium;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    @include mobile {
+      padding: $size-1 $size-05;
+      font-size: $font-size-body-small;
+    }
+    &--favorite {
+      @include tablet {
+        display: none;
+      }
+    }
+    &--games,
+    &--favorite {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__th-full {
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__row {
+    &:nth-child(odd) {
+      background-color: $color-white;
+    }
+
+    &:nth-child(even) {
+      background-color: $color-bg;
+    }
+
+    &--extra {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__td {
+    padding: $size-2 $size-3;
+    font-family: $font-family-base;
+    font-size: $font-size-body-medium;
+    font-weight: $font-weight-regular;
+    color: $color-on-primary;
+    white-space: nowrap;
+
+    text-align: center;
+
+    @include mobile {
+      font-size: $font-size-body-small;
+      padding: $size-1 $size-05;
+    }
+
+    &--rank {
+      font-weight: $font-weight-bold;
+      color: $color-on-bg;
+    }
+
+    &--gold {
+      color: $color-primary-high;
+    }
+
+    &--favorite {
+      @include tablet {
+        display: none;
+      }
+    }
+    &--games,
+    &--favorite {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__player {
+    display: flex;
+    align-items: center;
+    gap: $size-2;
+  }
+
+  &__avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: $size-5;
+    height: $size-5;
+    border-radius: $corner-full;
+    font-size: $font-size-label-medium;
+    font-weight: $font-weight-bold;
+    color: $color-on-primary;
+
+    &--1 {
+      background-color: $color-avatar-random-1;
+    }
+    &--2 {
+      background-color: $color-avatar-random-2;
+    }
+    &--3 {
+      background-color: $color-avatar-random-3;
+    }
+    &--4 {
+      background-color: $color-avatar-random-4;
+    }
+    &--5 {
+      background-color: $color-avatar-random-5;
+    }
+    @include mobile {
+      width: $size-3;
+      height: $size-3;
+    }
+  }
+
+  &__name {
+    font-weight: $font-weight-bold;
+
+    @include mobile {
+      max-width: 96px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: inline-block;
+    }
+  }
+
+  &__score-short {
+    display: none;
+  }
+
+  &__streak-short {
+    display: none;
+  }
+
+  @include tablet {
+    &__streak-full {
+      display: none;
+    }
+
+    &__streak-short {
+      display: inline;
+    }
+  }
+  @include mobile {
+    &__score-full {
+      display: none;
+    }
+
+    &__score-short {
+      display: inline;
+    }
+
+    &__streak-full {
+      display: none;
+    }
+
+    &__streak-short {
+      display: inline;
+    }
+  }
+
+  &__badge {
+    display: inline-flex;
+    padding: $size-05 $size-2;
+    border: 1px solid $color-outline-variant;
+    border-radius: $corner-full;
+    background-color: $color-white;
+    font-size: $font-size-label-large;
+    font-weight: $font-weight-bold;
+    color: $color-on-primary;
+  }
+}
