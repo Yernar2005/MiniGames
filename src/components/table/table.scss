@@ -5,6 +5,11 @@
   width: 100%;
   background-color: $color-bg;
   padding: $size-1 $size-3;
+
+  @include mobile {
+      padding: 0 $size-1;
+    }
+
   &__container {
     max-width: 1920px;
     margin: 0 auto;
