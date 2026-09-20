@@ -94,7 +94,6 @@ export class Carrusel extends Component {
     this.viewport?.addEventListener('scroll', this.handleScroll, { passive: true });
     window.addEventListener('resize', this.handleScroll);
 
-
     requestAnimationFrame(() => this.scrollToIndex(this.getActiveIndex(), 'auto'));
   }
 

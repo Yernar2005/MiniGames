@@ -52,18 +52,18 @@
       @include tablet {
         font-size: $font-size-display-medium;
       }
-      @include mobile{
-        font-size: $font-size-display-small
+      @include mobile {
+        font-size: $font-size-display-small;
       }
     }
 
     &__description {
       font-size: $font-size-body-large;
-       @include tablet {
+      @include tablet {
         font-size: $font-size-body-medium;
       }
-      @include mobile{
-        font-size: $font-size-body-small
+      @include mobile {
+        font-size: $font-size-body-small;
       }
     }
   }

@@ -39,8 +39,6 @@
     }
   }
 
-
-
   &__desktop,
   &__tablet,
   &__mobile {
@@ -169,7 +167,6 @@
   }
 }
 
-
 .header__burger {
   display: inline-flex;
   align-items: center;
@@ -254,7 +251,6 @@
     color: $color-white;
     cursor: pointer;
   }
-
 
   &__body {
     flex: 1;

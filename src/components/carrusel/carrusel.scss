@@ -4,7 +4,7 @@
 .new-games {
   width: 100%;
   background-color: $color-bg;
-  padding: $size-8 0;
+  padding: $size-4 0;
 
   &__container {
     max-width: 1920px;
@@ -102,7 +102,7 @@
     gap: $size-3;
     list-style: none;
     margin: 0;
-    padding: 0 calc(50% - 110px); 
+    padding: 0 calc(50% - 110px);
     @include tablet {
       padding: 0 calc(50% - 90px);
     }
@@ -112,8 +112,6 @@
     }
   }
 }
-
-
 
 .game-card {
   --card-w: 220px;
@@ -132,7 +130,9 @@
   background-repeat: no-repeat;
   scroll-snap-align: center;
   cursor: pointer;
-  transition: width 0.4s ease, flex-basis 0.4s ease;
+  transition:
+    width 0.4s ease,
+    flex-basis 0.4s ease;
 
   &--active {
     --card-w: 620px;
