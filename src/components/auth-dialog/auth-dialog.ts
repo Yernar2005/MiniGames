@@ -97,7 +97,10 @@ export class AuthDialog extends Component {
 
     this.contents.forEach((content) => {
       const isActive = content.dataset.authContent === tab;
+
       content.classList.toggle('auth-dialog__content--hidden', !isActive);
+      content.setAttribute('aria-hidden', String(!isActive));
+      (content as HTMLElement).hidden = !isActive;
     });
 
     requestAnimationFrame(() => {

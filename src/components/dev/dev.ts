@@ -9,5 +9,12 @@ export class DeveloperCta extends Component {
 
   private renderContent(): void {
     this.element.innerHTML = devCtaTemplate;
+    this.setImageSrc();
+  }
+
+  private setImageSrc(): void {
+    const base = import.meta.env.BASE_URL ?? '/';
+    const img = this.element.querySelector<HTMLImageElement>('[data-image]');
+    if (img) img.src = `${base}illustration-side.png`;
   }
 }
