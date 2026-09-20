@@ -20,11 +20,11 @@ export class Header extends Component {
     const loginBtn = this.element.querySelector('#auth-trigger-btn');
     loginBtn?.addEventListener('click', () => {});
 
-    this.mobileNav = this.element.querySelector('[data-mobile-nav')
-    this.burgers = this.element.querySelectorAll('[data-burger]')
-    this.closeBtn = this.element.querySelector('[data-mobile-nav-close]')
+    this.mobileNav = this.element.querySelector('[data-mobile-nav]');
+    this.burgers = this.element.querySelectorAll('[data-burger]');
+    this.closeBtn = this.element.querySelector('[data-mobile-nav-close]');
 
-     this.burgers?.forEach((burger) => {
+    this.burgers?.forEach((burger) => {
       burger.addEventListener('click', () => this.toggleMenu());
     });
 
@@ -39,7 +39,6 @@ export class Header extends Component {
     });
   }
 
- 
   private toggleMenu(): void {
     const isOpen = this.mobileNav?.classList.contains('mobile-nav--open');
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
