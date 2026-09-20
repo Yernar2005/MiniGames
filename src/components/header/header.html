@@ -20,12 +20,12 @@
             <a href="/community" class="nav__link">Community</a>
           </li>
         </ul>
-
-        <div class="header__auth auth">
-          <a href="/login" class="btn btn--outline">Log In</a>
-          <a href="/signup" class="btn btn--primary">Sign Up</a>
-        </div>
       </nav>
+
+      <div class="header__auth auth">
+        <a href="/login" class="btn btn--outline">Log In</a>
+        <a href="/signup" class="btn btn--primary">Sign Up</a>
+      </div>
     </div>
 
     <div class="header__tablet">
@@ -40,26 +40,12 @@
           aria-controls="mobile-nav"
           data-burger
         >
-          <svg
-            class="burger__icon burger__icon--open"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
+          <svg class="burger__icon burger__icon--open" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
-          <svg
-            class="burger__icon burger__icon--close"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
+          <svg class="burger__icon burger__icon--close" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
@@ -67,56 +53,53 @@
       </div>
     </div>
 
-   <div class="header__mobile">
-  <button
-    class="header__burger"
-    type="button"
-    aria-label="Открыть меню"
-    aria-expanded="false"
-    aria-controls="mobile-nav"
-    data-burger
-  >
-    <svg class="burger__icon burger__icon--open" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-    </svg>
-    <svg class="burger__icon burger__icon--close" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-    </svg>
-  </button>
-</div>
-
-
-</div> 
-<div class="mobile-nav" id="mobile-nav" data-mobile-nav>
-  <div class="mobile-nav__header">
-    <a href="/" class="mobile-nav__logo">
-      <img src="../../../public/Brand_Logo.svg" alt="MiniGames logo" />
-      <span>MiniGames</span>
-    </a>
-    <button class="mobile-nav__close" type="button" aria-label="Закрыть меню" data-mobile-nav-close>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      </svg>
-    </button>
+    <div class="header__mobile">
+      <button
+        class="header__burger"
+        type="button"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        data-burger
+      >
+        <svg class="burger__icon burger__icon--open" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <svg class="burger__icon burger__icon--close" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
   </div>
 
-  <nav aria-label="Мобильное меню">
-    <ul class="mobile-nav__list">
-      <li><a href="/" class="mobile-nav__link mobile-nav__link--active" aria-current="page">Home</a></li>
-      <li><a href="/library" class="mobile-nav__link">Library</a></li>
-      <li><a href="/tournaments" class="mobile-nav__link">Tournaments</a></li>
-      <li><a href="/community" class="mobile-nav__link">Community</a></li>
-    </ul>
-  </nav>
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav>
+    <div class="mobile-nav__header">
+      <a href="/" class="mobile-nav__logo">
+        <img src="../../../public/Brand_Logo.svg" alt="MiniGames logo" />
+      </a>
+      <button class="mobile-nav__close" type="button" aria-label="Закрыть меню" data-mobile-nav-close>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
 
-  <div class="mobile-nav__auth">
-    <a href="/login" class="btn btn--outline">Log In</a>
-    <a href="/signup" class="btn btn--primary">Sign Up</a>
+    <nav class="mobile-nav__body" aria-label="Мобильное меню">
+      <ul class="mobile-nav__list">
+        <li><a href="/" class="mobile-nav__link mobile-nav__link--active" aria-current="page">Home</a></li>
+        <li><a href="/library" class="mobile-nav__link">Library</a></li>
+        <li><a href="/tournaments" class="mobile-nav__link">Tournaments</a></li>
+        <li><a href="/community" class="mobile-nav__link">Community</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-nav__auth">
+      <a href="/login" class="btn btn--outline">Log In</a>
+      <a href="/signup" class="btn btn--primary">Sign Up</a>
+    </div>
   </div>
-</div>
-
 </header>

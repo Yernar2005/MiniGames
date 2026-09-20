@@ -28,14 +28,18 @@
   &__logo {
     display: flex;
     align-items: center;
+    gap: $size-1;
     text-decoration: none;
+    flex-shrink: 0;
 
     img {
-      height: 35px;
+      height: $size-4;
       width: auto;
       display: block;
     }
   }
+
+
 
   &__desktop,
   &__tablet,
@@ -46,30 +50,16 @@
   &__desktop {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: $size-8;
     width: 100%;
-  }
-
-  &__nav {
-    display: inline-flex;
-    align-items: center;
-    gap: $size-4;
-    width: 100%;
-    justify-content: end;
+    margin-right: $size-8;
   }
 
   &__auth {
     display: flex;
     align-items: center;
     gap: $size-2;
-  }
-
-  &__tablet {
-    display: none;
-  }
-
-  &__mobile {
-    display: none;
   }
 
   &__actions {
@@ -79,10 +69,6 @@
   }
 
   &__signup {
-    display: inline-flex;
-  }
-
-  &__burger {
     display: inline-flex;
   }
 }
@@ -117,10 +103,13 @@
 }
 
 .nav {
+  display: flex;
+
   &__list {
     display: flex;
     align-items: center;
-    gap: $size-4;
+
+    gap: $size-3;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -180,9 +169,18 @@
   }
 }
 
+
 .header__burger {
-  background: transparent;
-  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $size-5;
+  height: $size-5;
+  padding: 0;
+  border: 1.5px solid $color-on-primary;
+  border-radius: $corner-small;
+  background-color: transparent;
+  color: $color-on-primary;
   cursor: pointer;
 
   .burger__icon--close {
@@ -209,11 +207,15 @@
   height: 100%;
   padding: $size-4;
   background-color: $color-on-primary;
+  visibility: hidden;
   transform: translateX(100%);
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    visibility 0.3s ease;
   overflow-y: auto;
 
   &--open {
+    visibility: visible;
     transform: translateX(0);
   }
 
@@ -221,18 +223,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: $size-6;
+    margin-bottom: $size-8;
   }
 
   &__logo {
     display: flex;
     align-items: center;
-    gap: $size-2;
+    gap: $size-1;
     text-decoration: none;
     color: $color-white;
     font-family: $font-family-base;
     font-weight: $font-weight-bold;
-    font-size: $font-size-body-medium;
+    font-size: $font-size-body-large;
 
     img {
       height: 28px;
@@ -248,14 +250,19 @@
     height: $size-5;
     border: none;
     border-radius: $corner-small;
-    background-color: rgba($color-white, 0.08);
+    background-color: rgba($color-white, 0.1);
     color: $color-white;
     cursor: pointer;
   }
 
+
+  &__body {
+    flex: 1;
+  }
+
   &__list {
     list-style: none;
-    margin: 0 0 auto;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -265,7 +272,7 @@
   &__link {
     display: block;
     font-family: $font-family-base;
-    font-size: 28px;
+    font-size: $font-size-headline-medium;
     font-weight: $font-weight-regular;
     color: rgba($color-white, 0.6);
     text-decoration: none;
